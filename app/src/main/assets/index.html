@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <title>educate</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/bootstrap.3.4.1.min.css">
+    <link rel="stylesheet" href="./css/app.css">
+    <script src="./js/jquery.3.4.1.min.js"></script>
+    <script src="./js/bootstrap.3.4.1.min.js"></script>
+</head>
+<body>
+<div class="atmosphere" id="welcome" >
+    <div class="jumbotron text-center" >
+        <h1>Illusion</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 btn-group-vertical">
+                <button type="button" class="btn btn-lg btn-info" onclick="IllusionApp.start('SINGLE_TRANSITION')">
+                    Single Transition
+                </button>
+                <button type="button" class="btn btn-lg btn-info" onclick="IllusionApp.start('MULTIPLE_TRANSITION')">
+                    Multiple Transition
+                </button>
+                <button type="button" class="btn btn-lg btn-info" onclick="IllusionApp.start('TORCH')">
+                    Torch
+                </button>
+                <button type="button" class="btn btn-lg btn-info" onclick="IllusionApp.start('PARTY')">
+                    Party Light
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="illusion-window" hidden>
+</div>
+</body>
+<script type="text/javascript">
+    window.EducateApp = {
+        AppName: "educate",
+        Stack: {
+            tos: 0,
+            stack: ["#welcome"]
+        },
+        StackManager: {},
+        Controls: AndroidSystem,
+        timer: null
+    }
+</script>
+
+</html>
